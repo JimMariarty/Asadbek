@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kun va Tun</title>
+  <style>
+    /* Sahifa asosiy stili */
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      background-color: white;
+      color: black;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      padding: 20px;
+    }
+
+    /* Button uchun stil */
+    .button {
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Bitta button -->
+  <button class="button" onclick="toggleMode()">Kun</button>
+
+  <script>
+    /* Rejimni almashtirish funksiyasi */
+    function toggleMode() {
+      const body = document.body;
+      const button = document.querySelector('.button');
+
+      if (body.style.backgroundColor === 'black') {
+        body.style.backgroundColor = 'white';
+        body.style.color = 'black';
+        button.textContent = 'Kun';
+      } else {
+        body.style.backgroundColor = 'black';
+        body.style.color = 'white';
+        button.textContent = 'Tun';
+      }
+    }
+  </script>
+</body>
+</html>
